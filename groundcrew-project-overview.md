@@ -386,6 +386,8 @@ Pace: 3–4 hours on weekdays, 5+ hours on weekends.
 | **5. Platform + FinOps** | OpenTofu provisioner, cloud resources via instance roles, cost per client | `provisioner/opentofu`, `crew/operators/platform`, `finops` |
 | **6. Agency layer** | Client portal, monthly ops reports, handover export, retainer mode | `reports`, client portal in `web/` |
 
+**Gate before Phase 6** (first external client adopted): per-client model config, BYOK key storage (secrets module), and `allowFreeTierModels` enforcement (default `false`) must all exist. See [docs/decisions/0001-ai-layer-architecture.md](docs/decisions/0001-ai-layer-architecture.md), Decision 11.
+
 ### Phase 1 build order
 1. Control plane running with Postgres and register-agent / heartbeat endpoints
 2. Minimal agent that enrolls and sends heartbeats from a lab machine
